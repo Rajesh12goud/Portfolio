@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, Database, Cloud, Settings } from 'lucide-react';
+import { Code, Database, Cloud, Settings ,Shield } from 'lucide-react';
 import { skills } from '../data/portfolio';
+
+
+
 
 const Skills: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('backend');
@@ -16,9 +19,12 @@ const Skills: React.FC = () => {
     { id: 'frontend', label: 'Frontend', icon: Code },
     { id: 'devops', label: 'DevOps', icon: Settings },
     { id: 'cloud', label: 'Cloud', icon: Cloud },
+    { id: 'database', label: 'Data', icon: Database },
+    { id: 'core', label: 'Core Skills', icon: Shield }
   ];
 
-  const filteredSkills = skills.filter(skill => skill.category === activeCategory);
+    const filteredSkills = skills.filter(skill => skill.category === activeCategory);
+    
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -106,6 +112,10 @@ const Skills: React.FC = () => {
                   {skill.level}%
                 </span>
               </div>
+              <div className="grid grid-cols-7 gap-4 justify-items-center">
+                      {/* your skill buttons here */}
+              </div>
+
               
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
                 <motion.div
@@ -115,6 +125,7 @@ const Skills: React.FC = () => {
                   transition={{ duration: 1, delay: index * 0.05 }}
                 />
               </div>
+
             </motion.div>
           ))}
         </motion.div>

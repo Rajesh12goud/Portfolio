@@ -118,7 +118,7 @@ const About: React.FC = () => {
                   x: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                 }}
               >
-                <span className="text-white font-bold">5+</span>
+                <span className="text-white font-bold">4+</span>
               </motion.div>
             </div>
           </motion.div>

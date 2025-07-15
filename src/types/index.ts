@@ -22,7 +22,7 @@ export interface Project {
 export interface Skill {
   name: string;
   level: number;
-  category: 'backend' | 'frontend' | 'devops' | 'cloud';
+  category: 'backend' | 'frontend' | 'devops' | 'cloud' |'database' |'core';
 }
 
 export interface SocialLink {

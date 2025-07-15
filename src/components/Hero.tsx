@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { ChevronDown, ExternalLink } from 'lucide-react';
 import { personalInfo, socialLinks } from '../data/portfolio';
 
+
 const Hero: React.FC = () => {
   const [currentText, setCurrentText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
@@ -12,20 +13,20 @@ const Hero: React.FC = () => {
 
   // Skill icons with pill shapes and colorful gradients like in the image
   const skillIcons = [
-    { name: 'Python', icon: '🐍', gradient: 'from-blue-400/80 to-orange-500/80' },
-    { name: 'SQL', icon: '🗃️', gradient: 'from-blue-400/80 to-blue-500/80' },
-    { name: 'Power BI', icon: '📊', gradient: 'from-blue-400/80 to-emerald-500/80' },
-    { name: 'AI & ML', icon: '🤖', gradient: 'from-blue-400/80 to-purple-500/80' },
-    { name: 'AWS', icon: '☁️', gradient: 'from-blue-400/80 to-red-500/80' },
-    { name: 'React', icon: '⚛️', gradient: 'from-blue-400/80 to-indigo-500/80' },
-    { name: 'TypeScript', icon: '📘', gradient: 'from-blue-400/80 to-green-500/80' },
-    { name: 'Node.js', icon: '🟢', gradient: 'from-blue-400/80 to-pink-500/80' },
-    { name: 'Java', icon: '☕', gradient: 'from-blue-400/80 to-red-500/80' },
-    { name: 'Spring Boot', icon: '🍃', gradient: 'from-blue-400/80 to-teal-500/80' },
-    { name: 'Docker', icon: '🐳', gradient: 'from-blue-400/80 to-cyan-500/80' },
-    { name: 'Kafka', icon: '📈', gradient: 'from-blue-400/80 to-indigo-500/80' },
-    { name: 'MongoDB', icon: '🗄️', gradient: 'from-blue-400/80 to-green-500/80' },
-    { name: 'Redis', icon: '🔴', gradient: 'from-blue-400/80 to-red-500/80' },
+      { name: 'Java', icon: '☕', gradient: 'from-blue-300/50 to-orange-400/60' },
+      { name: 'Spring Boot', icon: '🍃', gradient: 'from-blue-400/80 to-teal-500/80' },
+      { name: 'Node.js', icon: '🟢', gradient: 'from-blue-400/80 to-emerald-500/80' },
+      { name: 'Kafka', icon: '📈', gradient: 'from-blue-400/80 to-purple-500/80' },
+      { name: 'React.js', icon: '⚛️', gradient: 'from-blue-400/80 to-indigo-500/80' },
+      { name: 'TypeScript', icon: '📘', gradient: 'from-blue-400/80 to-green-500/80' },
+      { name: 'Docker', icon: '🐳', gradient: 'from-blue-400/80 to-cyan-500/80' },
+      { name: 'Kubernetes', icon: '📦', gradient: 'from-blue-400/80 to-pink-500/80' },
+      { name: 'AWS', icon: '☁️', gradient: 'from-blue-400/80 to-yellow-500/80' },
+      { name: 'MongoDB', icon: '🗄️', gradient: 'from-blue-400/80 to-green-500/80' },
+      { name: 'Redis', icon: '🔴', gradient: 'from-blue-400/80 to-red-500/80' },
+      { name: 'Jenkins', icon: '🛠️', gradient: 'from-blue-400/80 to-amber-500/80' },
+      { name: 'GraphQL', icon: '🔗', gradient: 'from-blue-400/80 to-pink-500/80' },
+      { name: 'Terraform', icon: '🏗️', gradient: 'from-blue-400/80 to-gray-500/80' },
   ];
 
   useEffect(() => {
@@ -154,7 +155,7 @@ const Hero: React.FC = () => {
               {skillIcons.slice(0, 7).map((skill, index) => (
                 <motion.div
                   key={skill.name}
-                  className={`relative px-6 py-3 rounded-full text-white font-medium flex items-center space-x-2 bg-gradient-to-r ${skill.gradient} shadow-lg backdrop-blur-sm border border-white/20`}
+                  className={`relative px-3 py-1.5 rounded-full text-white font-medium flex items-center space-x-2 bg-gradient-to-r ${skill.gradient} shadow-lg backdrop-blur-sm border border-white/20`}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   animate={{ 
                     opacity: 1, 
@@ -194,7 +195,7 @@ const Hero: React.FC = () => {
               {skillIcons.slice(7).map((skill, index) => (
                 <motion.div
                   key={skill.name}
-                  className={`relative px-6 py-3 rounded-full text-white font-medium flex items-center space-x-2 bg-gradient-to-r ${skill.gradient} shadow-lg backdrop-blur-sm border border-white/20`}
+                  className={`relative px-3 py-1.5 rounded-full text-white font-medium flex items-center space-x-2 bg-gradient-to-r ${skill.gradient} shadow-lg backdrop-blur-sm border border-white/20`}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   animate={{ 
                     opacity: 1, 
@@ -271,7 +272,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* CSS for floating animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes float0 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
         @keyframes float1 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
         @keyframes float2 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
